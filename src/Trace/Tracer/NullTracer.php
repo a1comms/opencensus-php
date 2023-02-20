@@ -50,7 +50,7 @@ class NullTracer extends ContextTracer implements TracerInterface
      *      <a href="../Span.html#method___construct">OpenCensus\Trace\Span::__construct()</a>
      * @return Span
      */
-    public function startSpan(array $spanOptions)
+    public function startSpan(array $spanOptions = [])
     {
         return new Span($spanOptions);
     }
