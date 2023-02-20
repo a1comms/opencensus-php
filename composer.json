@@ -31,7 +31,6 @@
         "opencensus/opencensus": "*"
     },
     "conflict": {
-        "opencensus/opencensus": "*",
         "ext-opencensus": "< 0.1.0"
     },
     "suggest": {
