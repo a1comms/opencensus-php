@@ -26,7 +26,7 @@ use OpenCensus\Trace\SpanData;
  * This implementation of the TracerInterface is the null object implementation.
  * All methods are no ops. This tracer should be used if tracing is disabled.
  */
-class NullTracer implements TracerInterface
+class NullTracer extends ContextTracer implements TracerInterface
 {
     /**
      * Instrument a callable by creating a Span
@@ -139,25 +139,5 @@ class NullTracer implements TracerInterface
      */
     public function addMessageEvent($type, $id, $options = [])
     {
-    }
-
-    /**
-     * Returns the current SpanContext
-     *
-     * @return SpanContext
-     */
-    public function spanContext()
-    {
-        return new SpanContext(null, null, false);
-    }
-
-    /**
-     * Whether or not this tracer is enabled.
-     *
-     * @return bool
-     */
-    public function enabled()
-    {
-        return false;
     }
 }
