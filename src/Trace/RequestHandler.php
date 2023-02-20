@@ -110,7 +110,7 @@ class RequestHandler
 
         $this->tracer = $spanContext->enabled()
             ? extension_loaded('opencensus') ? new ExtensionTracer($spanContext) : new ContextTracer($spanContext)
-            : new NullTracer();
+            : new NullTracer($spanContext);
 
         $spanOptions = $options + [
             'startTime' => $this->startTimeFromHeaders($this->headers),
