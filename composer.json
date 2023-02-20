@@ -28,9 +28,10 @@
     "require-dev": {
     },
     "replace": {
-        "opencensus/opencensus": "v0.7.0"
+        "opencensus/opencensus": "*"
     },
     "conflict": {
+        "opencensus/opencensus": "*",
         "ext-opencensus": "< 0.1.0"
     },
     "suggest": {
