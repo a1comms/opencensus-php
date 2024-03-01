@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.4",
         "ramsey/uuid": "~3 || ~4",
-        "psr/log": "~1 || ~2 || ~3",
+        "psr/log": "~1 || ~2",
         "psr/cache": "~1 || ~2 || ~3",
         "cache/adapter-common": "~1"
     },
